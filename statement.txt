@@ -1,0 +1,16 @@
+CREATE TABLE MyApp
+(
+Username VARCHAR NOT NULL,
+Password VARCHAR NOT NULL,
+Url VARCHAR NOT NULL,
+Note VARCHAR,
+PRIMARY KEY (Username,Url)
+)
+
+SELECT * FROM MyApp
+
+INSERT INTO [MyApp](Username,Password,Url,Note) VALUES ('admin','admin','gmail.com','')
+
+UPDATE [MyApp] SET Username='admin',Password='admin',Url='gmail.com' WHERE Username='admin2' AND Url='google.com'
+
+Show all tables: SELECT * FROM sqlite_master WHERE type='table'
